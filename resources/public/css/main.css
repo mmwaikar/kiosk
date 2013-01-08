@@ -1,0 +1,31 @@
+#row1 {
+	height: 100px;
+	overflow:auto;
+	background:#DCEAF4;
+}
+
+#row2 {
+	height: 440px;
+	overflow:auto;
+}
+
+#row3 {
+	height: 100px;
+	overflow:auto;
+	background:#DCEAF4;
+}
+
+#column1 {
+	height: 100%;
+	background:#BBD8E9;
+}
+
+#column2 {
+	height: 100%;
+	background:#DDDDDD;
+}
+
+#column3 {
+	height: 100%;
+	background:#BBD8E9;
+}
