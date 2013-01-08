@@ -5,49 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiosk Application</title>
 
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- own styling -->
     <link href="css/main.css" rel="stylesheet" media="screen">
   </head>
 
   <body id="main">
-  
-	<div class="container-fluid">
-		<div id="row1" class="row-fluid">
-			<div class="span12">
-				top
-			</div>
-		</div>
-		
-		<div id="row2" class="row-fluid fill">
-			<div id="column1" class="span2">
-				<!--Sidebar content-->
-				sidebar 1
-			</div>
-			<div id="column2" class="span8">
-				<!--Body content-->
-				body
-			</div>
-			<div id="column3" class="span2">
-				<!--Sidebar content-->
-				sidebar 2
-			</div>
-		</div>
-		
-		<div id="row3" class="row-fluid">
-			<div class="span12">
-				bottom
-			</div>
-		</div>
+    
+    <div class="container-fluid">
+      <div id="row1" class="row-fluid">
+	<div class="span12">
+          <h3>Show advertisement in which pane?</h3>
+	  <div class="btn-group">
+            <button id="left" class="btn">Left</button>
+            <button id="bottom" class="btn">Bottom</button>
+            <button id="right" class="btn">Right</button>
+            <button id="center" class="btn">Center</button>
+          </div>
 	</div>
-	
-    <!--<div id="row1" class="row">
-      <div class="navbar">
-      	<div class="navbar-inner">
-      		Level 1 row
-      	</div>     
       </div>
+      
+      <div id="row2" class="row-fluid fill">
+	<div id="column1" class="span2">
+	  <!--Sidebar content-->
+	  left
+	</div>
+	<div id="column2" class="span8">
+	  <!--Body content-->
+	  body
+	</div>
+	<div id="column3" class="span2">
+	  <!--Sidebar content-->
+	  right
+	</div>
+      </div>
+      
+      <div id="row3" class="row-fluid">
+	<div class="span12">
+	  bottom
+	</div>
+      </div>
+    </div>
+    
+    <!--<div id="row1" class="row">
+        <div class="navbar">
+      	  <div class="navbar-inner">
+      	    Level 1 row
+      	  </div>     
+        </div>
     </div>
 
     <div id="row2" class="row">
@@ -65,5 +77,8 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- pointing to cljsbuild generated js file  -->
+    <script type="text/javascript" src="js/kiosk.js"></script>
   </body>
 </html>
