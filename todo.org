@@ -1,0 +1,7 @@
+* Tasks
+** DONE (in core.clj) - can we route it to a particular route (redirecting)
+   CLOSED: [2013-01-11 Fri 14:50]
+** TODO (in core.cljs) - can we enable repl only in dev mode
+** DONE (in core.cljs) - how to listen to two events on the same button (element)
+   CLOSED: [2013-01-11 Fri 15:21]
+** TODO (in core.cljs) - how to use document.ready (and document.onload)
