@@ -8,18 +8,14 @@
          element (em/content cntnt)))
 
 ;; ajax related methods
-(defn receiver [event]
-  (let [response (.-target event)]
-    (replace-content ["#column1"] (.getResponseText response))))
+(defn get-ajax-response [event]
+  (.getResponseText (.-target event)))
 
-(defn receiver-right [event]
-  (let [response (.-target event)]
-    (replace-content ["#column3"] (.getResponseText response))))
+(defn get-ajax-response-and-update-node [node]
+  #(replace-content node (get-ajax-response %)))
 
-(defn show-ad-ajax [url content]
-  (if-not (= (.indexOf url "google") -1)
-    (xhr/send url receiver "GET" content)
-    (xhr/send url receiver-right "GET" content)))
+(defn send-ajax-request [url callback http-method content]
+  (xhr/send url callback http-method content))
 
 ;; css-selector constants
 (def *left-button* ["#left"])
@@ -33,28 +29,33 @@
 (em/defaction show-ad [sel msg]
   sel (em/content msg))
 
+(defn start []
+  ;; (replace-content ["#column2"] "center")
+  #(em/at js/document
+          ["#appframe"] (em/set-attr :src "https://rubygems.org")))
+
 (em/defaction setup []
   *left-button* (em/do->
                  (em/listen :mouseenter #(em/at (.-currentTarget %) (em/add-class "highlight")))
                  (em/listen :mouseleave #(em/at (.-currentTarget %) (em/remove-class "highlight")))
-                 ;; (em/listen :click #(show-ad ["#column1"] (message "Left")))
-                 (em/listen :click #(show-ad-ajax "http://localhost:3000/device/1/app/google" nil)))
+                 (em/listen :click #(send-ajax-request "http://localhost:3000/device/1/app/google"
+                                                       (get-ajax-response-and-update-node ["#column1"]) "GET" nil)))
   
   *bottom-button* (em/listen :click #(show-ad ["#row3"] (message "Bottom")))
-  *right-button* (em/listen :click #(show-ad-ajax "http://localhost:3000/device/1/app/pizzahut" nil))
-  ;; (em/listen :click #(show-ad ["#column3"] (message "Right")))
+  
+  *right-button* (em/listen :click #(send-ajax-request "http://localhost:3000/device/1/app/pizzahut"
+                                                       (get-ajax-response-and-update-node ["#column3"]) "GET" nil))
+  
   *center-button* (em/do->
                    (em/listen :mouseenter #(em/at (.-currentTarget %) (em/add-class "btn-small")))
                    (em/listen :mouseleave #(em/at (.-currentTarget %) (em/remove-class "btn-small")))
-                   (em/listen :click #(show-ad ["#column2"] (message "Center")))))
-
-(defn start []
-  (replace-content ["#column2"] "center"))
+                   (em/listen :click #(start))))
 
 ;; initialization
 (em/defaction init []
   (setup)
-  (start))
+  ;; (start)
+  )
 
 (set! (.-onload js/window)
       (init))

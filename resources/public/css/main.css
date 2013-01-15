@@ -1,3 +1,7 @@
+body {
+    background-color: #f5f5f5;
+}
+
 #row1 {
     height: 100px;
     overflow:auto;

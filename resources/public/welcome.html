@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk Application</title>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- own styling -->
+    <link href="css/main.css" rel="stylesheet" media="screen">
+  </head>
+
+  <body id="main">
+    <div class="container-fluid">
+      <h1>Welcome to the Kiosk Application</h1>
+      <br />
+      <h2>Please select the device to view -</h2>
+      <ul>
+        <li>
+          <a href="/index.html">Device 1</a>
+        </li>
+        <li>
+          <a href="/index.html">Device 2</a>
+        </li>
+        <li>
+          <a href="/index.html">Device 3</a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- <div class="container-fluid"> -->
+    <!--   <div id="row1" class="row-fluid"> -->
+    <!--     <div class="span12"> -->
+    <!--       <h3>Show advertisement in which pane?</h3> -->
+    <!--       <div class="btn-group"> -->
+    <!--         <button id="left" class="btn">Left</button> -->
+    <!--         <button id="bottom" class="btn">Bottom</button> -->
+    <!--         <button id="right" class="btn">Right</button> -->
+    <!--         <button id="center" class="btn">Center</button> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--   </div> -->
+      
+    <!--   <div id="row2" class="row-fluid fill"> -->
+    <!--     <div id="column1" class="span2"> -->
+    <!--       <\!--Sidebar content-\-> -->
+    <!--       left -->
+    <!--     </div> -->
+    <!--     <div id="column2" class="span8"> -->
+    <!--       <\!--Body content-\-> -->
+    <!--       <iframe id="appframe" height="100%" width="100%" src="http://www.joshsoftware.com"> -->
+    <!--         <p>Your browser does not support iframes.</p> -->
+    <!--       </iframe> -->
+    <!--     </div> -->
+    <!--     <div id="column3" class="span2"> -->
+    <!--       <\!--Sidebar content-\-> -->
+    <!--       right -->
+    <!--     </div> -->
+    <!--   </div> -->
+      
+    <!--   <div id="row3" class="row-fluid"> -->
+    <!--     <div class="span12"> -->
+    <!--       bottom -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- pointing to cljsbuild generated js file  -->
+    <script type="text/javascript" src="js/kiosk.js"></script>
+  </body>
+</html>
