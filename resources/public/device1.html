@@ -10,41 +10,27 @@
     <![endif]-->
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- own styling -->
-    <link href="css/main.css" rel="stylesheet" media="screen">
+    <link href="/css/main.css" rel="stylesheet" media="screen">
+	 <link href="/css/device1.css" rel="stylesheet" media="screen">
   </head>
 
   <body id="main">
     <div class="container-fluid">
       <div id="toprow" class="row-fluid">
-	<!-- <div class="span12"> -->
-        <!--   <h3>Show advertisement in which pane?</h3> -->
-	<!--   <div class="btn-group"> -->
-        <!--     <button id="left" class="btn">Left</button> -->
-        <!--     <button id="bottom" class="btn">Bottom</button> -->
-        <!--     <button id="right" class="btn">Right</button> -->
-        <!--     <button id="center" class="btn">Center</button> -->
-        <!--   </div> -->
-	<!-- </div> -->
       </div>
       
       <div id="centerrow" class="row-fluid fill">
-	<div id="leftcolumn" class="span2">
-	  <!--Sidebar content-->
-	  left
-	</div>
-	<div id="centercolumn" class="span8">
+	<div id="centercolumn" class="span12">
+	  <div id="app">
+	  </div>
 	  <!--Body content-->
           <iframe id="appframe" height="100%" width="100%" src="http://www.joshsoftware.com">
             <p>Your browser does not support iframes.</p>
           </iframe>
-	</div>
-	<div id="rightcolumn" class="span2">
-	  <!--Sidebar content-->
-	  right
 	</div>
       </div>
       
