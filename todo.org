@@ -4,4 +4,10 @@
 ** TODO (in core.cljs) - can we enable repl only in dev mode
 ** DONE (in core.cljs) - how to listen to two events on the same button (element)
    CLOSED: [2013-01-11 Fri 15:21]
-** TODO (in core.cljs) - how to use document.ready (and document.onload)
+** DONE (in core.cljs) - how to use document.ready (and document.onload)
+   CLOSED: [2013-01-17 Thu 19:22]
+** TODO the ajax request sends url to navigate to various ads, with their respective positions
+** TODO show close button on iframe itself
+** TODO when an app is clicked, hide apps, show ad, navigate to URL and close button on the URL content
+** TODO when close button is clicked, show apps screen again
+** TODO use mongo-db

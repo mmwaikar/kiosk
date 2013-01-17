@@ -6,51 +6,45 @@
     <title>Kiosk Application</title>
 
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- own styling -->
-    <link href="css/main.css" rel="stylesheet" media="screen">
+    <link href="/css/main.css" rel="stylesheet" media="screen">
+    <link href="/css/device2.css" rel="stylesheet" media="screen">
   </head>
 
   <body id="main">
-    <div class="container-fluid">
-      <div id="toprow" class="row-fluid">
-	<!-- <div class="span12"> -->
-        <!--   <h3>Show advertisement in which pane?</h3> -->
-	<!--   <div class="btn-group"> -->
-        <!--     <button id="left" class="btn">Left</button> -->
-        <!--     <button id="bottom" class="btn">Bottom</button> -->
-        <!--     <button id="right" class="btn">Right</button> -->
-        <!--     <button id="center" class="btn">Center</button> -->
-        <!--   </div> -->
-	<!-- </div> -->
-      </div>
-      
+    <div class="container-fluid">      
       <div id="centerrow" class="row-fluid fill">
 	<div id="leftcolumn" class="span2">
 	  <!--Sidebar content-->
 	  left
 	</div>
 	<div id="centercolumn" class="span8">
+	  <div id="appcontainer">
+            <div id="app" class="span6">
+              <div class="btn-group">
+                <button id="app1" class="btn">Walmart</button>
+                <button id="app2" class="btn">Sears</button>
+              </div>
+            </div>
+            <div id="home" class="span1">
+              <a href="/device/2">Home</a>
+            </div>
+	  </div>
 	  <!--Body content-->
-          <iframe id="appframe" height="100%" width="100%" src="http://www.joshsoftware.com">
+          <iframe id="appframe" height="100%" width="100%" src="http://www.thinkrelevance.com">
             <p>Your browser does not support iframes.</p>
           </iframe>
 	</div>
 	<div id="rightcolumn" class="span2">
 	  <!--Sidebar content-->
 	  right
-	</div>
-      </div>
-      
-      <div id="bottomrow" class="row-fluid">
-	<div class="span12">
-	  bottom
 	</div>
       </div>
     </div>

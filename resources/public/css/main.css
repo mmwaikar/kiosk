@@ -1,31 +1,32 @@
-#row1 {
-    height: 100px;
+body {
+    background-color: #f5f5f5;
+}
+
+#toprow {
     overflow:auto;
     background:#DCEAF4;
 }
 
-#row2 {
-    height: 440px;
+#centerrow {
     overflow:auto;
 }
 
-#row3 {
-    height: 100px;
+#bottomrow {
     overflow:auto;
     background:#DCEAF4;
 }
 
-#column1 {
+#leftcolumn {
     height: 100%;
     background:#BBD8E9;
 }
 
-#column2 {
+#centercolumn {
     height: 100%;
     background:#DDDDDD;
 }
 
-#column3 {
+#rightcolumn {
     height: 100%;
     background:#BBD8E9;
 }

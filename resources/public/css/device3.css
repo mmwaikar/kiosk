@@ -1,0 +1,19 @@
+#toprow {
+    height: 100px;
+    overflow:auto;
+    background:#DCEAF4;
+}
+
+#app {
+    height: 40px;
+}
+
+#centerrow {
+    height: 440px;
+}
+
+#bottomrow {
+    height: 100px;
+    overflow:auto;
+    background:#DCEAF4;
+}
