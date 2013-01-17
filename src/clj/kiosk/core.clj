@@ -21,17 +21,9 @@
   ;; for individual devices
   (GET "/device/:dev" [dev]
        (resp/file-response (str "device" dev ".html") {:root "resources/public"}))
-  
-  ;; (GET "/device/:dev" [dev]
-  ;;      ;; (resp/file-response "index.html" {:root "resources/public"})
-  ;;      ;; (prn (str "for device: " dev))
-  ;;      (let [req-map (show-row-cols-for (Integer/parseInt dev))]
-  ;;        (prn req-map)
-  ;;        ;; (rmr/wrap-resource (resp/response (index req-map)) "../resources/public/main.css")
-  ;;        (resp/response (index req-map))
-  ;;        ))
-  
-  (GET "/device/:dev/app/:app" [dev app] (prn "dev: " dev ", app: " app)
+
+  ;; for device-app combination
+  (GET "/device/:dev/app/:app" [dev app] ;; (prn "dev: " dev ", app: " app)
        (let [resp-str (str "App " app " on device " dev " was clicked. Showing add for " (:name (which-ad app)))]
          (-> (resp/response resp-str)
              (resp/content-type "text/plain"))))
