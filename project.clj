@@ -6,11 +6,13 @@
 
   ;; CLJ source code path
   :source-paths ["src/clj"]
+  :java-source-path "src/clj"
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [ring "1.1.6"]
                  [compojure "1.1.3"]
                  [enlive "1.0.1"]
-                 [enfocus "1.0.0-beta2"]]
+                 [enfocus "1.0.0-beta2"]
+                 [com.novemberain/monger "1.4.2"]]
 
   ;; lein-cljsbuild plugin to build a CLJS project
   :plugins [[lein-cljsbuild "0.2.10"]
